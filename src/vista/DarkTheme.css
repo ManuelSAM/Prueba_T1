@@ -1,0 +1,208 @@
+/**
+ *
+ * @author Manuel San Antonio Morales
+ *
+ *
+ *
+ * Root created to set default accent color for all view items, taken from modena.css.
+ */
+.root {
+	-fx-accent:#E0177F;
+	-fx-focus-color:#E0177F;
+}
+/**
+ * Background image added with cover size value in order to fit it to window size.
+ */
+.background {
+    -fx-background-color:green;
+    -fx-background-size:cover;
+}
+.background2 {
+    -fx-background-color:white;
+    -fx-background-size:cover;
+}
+
+.label {
+    -fx-font-size: 9pt;
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-text-fill: white;
+    -fx-opacity: 0.6;
+}
+.label1 {
+    -fx-font-size: 9pt;
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-text-fill: white;
+    -fx-opacity: 0.6;
+}
+
+.label2 {
+    -fx-font-size: 12pt;
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-text-fill: black;
+    -fx-opacity: 0.6;
+}
+.label3 {
+    -fx-font-size: 9pt;
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-text-fill: black;
+    -fx-opacity: 0.6;
+    -fx-font-style:italic;
+}
+.label-titulo{
+    -fx-font-size: 16pt;
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-text-fill: green;
+    -fx-opacity: 0.6;
+}
+
+.label-bright {
+    -fx-font-size: 11pt;
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-text-fill: white;
+    -fx-opacity: 1;
+}
+
+.label-header {
+    -fx-font-size: 32pt;
+    -fx-font-family: "Segoe UI Light";
+    -fx-text-fill: white;
+    -fx-opacity: 1;
+}
+
+/**
+ * Image disco.jpg set as table-view background.
+ */
+.table-view {
+    -fx-base: #751B49;
+    -fx-control-inner-background: #751B49;
+    -fx-background-color: -fx-focus-color;
+    -fx-background-image:url(file:res/disco.jpg);
+    -fx-table-cell-border-color: transparent;
+    -fx-table-header-border-color: transparent;
+    -fx-padding: 5;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header, .table-view .filler {
+    -fx-size: 35;
+    -fx-border-width: 0 0 1 0;
+    -fx-background-color: transparent;
+    -fx-border-color:
+        transparent
+        transparent
+        derive(-fx-base, 80%)
+        transparent;
+    -fx-border-insets: 0 10 1 0;
+}
+
+.table-view .column-header .label {
+    -fx-font-size: 20pt;
+    -fx-font-family: "Segoe UI Light";
+    -fx-text-fill: white;
+    -fx-alignment: center-left;
+    -fx-opacity: 1;
+}
+
+/**
+ * Taking fx-focus-color set in root for selected cell in table view.
+ */
+.table-view:focused .table-row-cell:filled:focused:selected {
+    -fx-background-color: -fx-focus-color;
+}
+
+/**
+ * Derived black for split-pane divider.
+ */
+.split-pane:horizontal > .split-pane-divider {
+    -fx-border-color: transparent white transparent white;
+    -fx-background-color: transparent, derive(#1d1d1d,10%);
+}
+
+.split-pane {
+    -fx-padding: 1 0 0 0;
+}
+
+/**
+ * Image disco.jpg set as menu-bar background.
+ */
+.menu-bar {
+    -fx-background-color: derive(#1d1d1d,10%);
+    -fx-background-image:url(file:res/disco.jpg);
+}
+
+.context-menu {
+    -fx-background-color: derive(#1d1d1d,5%);
+}
+
+.menu-bar .label {
+    -fx-font-size: 14pt;
+    -fx-font-family: "Segoe UI Light";
+    -fx-text-fill: white;
+    -fx-opacity: 0.9;
+}
+
+.menu .left-container {
+    -fx-background-color: black;
+}
+
+.text-field {
+    -fx-font-size: 12pt;
+    -fx-font-family: "Segoe UI Semibold";
+}
+
+/**
+ * Setting a default button style (border color,width, font family, etc.).
+ */
+.button {
+    -fx-padding: 5 22 5 22;
+    -fx-border-color: #e2e2e2;
+    -fx-border-width: 2;
+    -fx-background-radius: 0;
+    -fx-background-color: -fx-focus-color;
+    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    -fx-font-size: 11pt;
+    -fx-text-fill: #d8d8d8;
+    -fx-background-insets: 0 0 0 0, 0, 1, 2;
+}
+
+/**
+ * Image circle.jpg set as table-view background.
+ */
+.button:hover {
+    -fx-background-color: #751B49;
+    -fx-background-image:url(file:res/circle.jpg);
+}
+
+/**
+ * Setting up a change color when any button is pressed.
+ */
+.button:pressed, .button:default:hover:pressed {
+  -fx-background-color: derive(#751B49,40%);
+  -fx-text-fill: white;
+}
+
+.button:focused {
+    -fx-border-color: white, white;
+    -fx-border-width: 1, 1;
+    -fx-border-style: solid, segments(1, 1);
+    -fx-border-radius: 0, 0;
+    -fx-border-insets: 1 1 1 1, 0;
+}
+
+.button:disabled, .button:default:disabled {
+    -fx-opacity: 0.4;
+    -fx-background-color: #1d1d1d;
+    -fx-text-fill: white;
+}
+
+.imageView {
+	-fx-image:url(file:res/profilephoto.png);
+}
+.labelwithimage {
+    -fx-graphic-text-gap : 10;
+    -fx-background-image:url(file:res/profilephoto.png);
+}
+
